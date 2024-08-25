@@ -3,7 +3,7 @@ import HomePage from '../components/HomePage.vue';
 
 const routes = [
   {
-    path: '/',
+    path: '/portfolio-website/',
     name: 'home',
     component: HomePage
   }
