@@ -18,7 +18,7 @@
                 A passionate Full Stack Developer, constantly learning and honing my skills to build highly functional and visually appealing websites. I enjoy working on projects that challenge me to think critically and creatively.
               </p>
               <p>
-                In my free time, I like to explore new technology, play games, and edit videos. Previously a highschool eSports captain, I excel in fast paced environments. I also enjoy sharing my experiences and knowledge.
+                In my free time, I like to explore new technology, play games, and edit videos. Previously a high school eSports captain, I excel in fast-paced environments. I also enjoy sharing my experiences and knowledge.
               </p>
               <p>
                 Here are a few technologies I’ve been working with recently:
@@ -35,7 +35,7 @@
                 <li>Micro Services</li>
               </ul>
               <p>
-                <a href="../assets/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
+                <a href="/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
               </p>
             </div>
           </div>
@@ -118,7 +118,6 @@ export default {
           description: "Edited and produced gaming videos, applying creativity and technical skills to deliver high-quality content.",
           tags: ["Video Editing", "Gaming", "Sound Design", "Visual Effects", "Color Grading", "Adobe"],
         },
-        
       ],
       projects: [
         {
@@ -319,13 +318,12 @@ export default {
   }
 
   .profile-container {
-    margin-right: 0;
-    margin-bottom: 20px;
+    display: none; /* Hide the profile image on mobile */
   }
 
-  .profile-image {
-    width: 120px;
-    height: 120px;
+  .about-text {
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
   .about-text h3 {

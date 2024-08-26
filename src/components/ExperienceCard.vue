@@ -36,14 +36,6 @@ export default {
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-.experience-card.active {
-  opacity: 1; /* Full visibility when active */
-}
-
-.experience-card.inactive {
-  opacity: 0.5; /* Dim non-active cards */
-}
-
 .experience-header {
   display: flex;
   justify-content: space-between;
@@ -52,7 +44,7 @@ export default {
 
 .tags {
   display: flex;
-  flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
@@ -61,9 +53,26 @@ export default {
   padding: 5px 10px;
   border-radius: 5px;
   margin-right: 5px;
-  margin-bottom: 5px; /* Add margin to the bottom to create space between rows */
+  margin-bottom: 5px;
   font-size: 0.875rem;
   color: #64ffda;
-  white-space: nowrap; /* Prevent tags from breaking mid-word */
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-header h3,
+  .experience-header p {
+    text-align: left;
+    width: 100%;
+  }
+
+  .experience-card {
+    text-align: left;
+  }
 }
 </style>

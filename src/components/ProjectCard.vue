@@ -1,6 +1,6 @@
 <template>
     <a :href="link" target="_blank" class="project-card">
-      <div class="thumbnail-container">
+      <div class="thumbnail-container" v-if="showThumbnail">
         <img :src="thumbnail" alt="Project Thumbnail" class="thumbnail" />
       </div>
       <div class="project-content">
@@ -22,6 +22,22 @@
       thumbnail: String,
       link: String,
     },
+    data() {
+      return {
+        showThumbnail: window.innerWidth > 768, // Set initial state
+      };
+    },
+    mounted() {
+      window.addEventListener("resize", this.updateShowThumbnail);
+    },
+    beforeDestroy() {
+      window.removeEventListener("resize", this.updateShowThumbnail);
+    },
+    methods: {
+      updateShowThumbnail() {
+        this.showThumbnail = window.innerWidth > 768;
+      },
+    },
   };
   </script>
   
@@ -41,14 +57,6 @@
   .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project-card.active {
-    opacity: 1;
-  }
-  
-  .project-card.inactive {
-    opacity: 0.5;
   }
   
   .thumbnail-container {
@@ -80,7 +88,7 @@
   
   .tags {
     display: flex;
-    flex-wrap: wrap; /* Allow tags to wrap to the next line */
+    flex-wrap: wrap;
     margin-top: 10px;
   }
   
@@ -89,10 +97,28 @@
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 5px;
-    margin-bottom: 5px; /* Add margin to the bottom to create space between rows */
+    margin-bottom: 5px;
     font-size: 0.875rem;
     color: #64ffda;
-    white-space: nowrap; /* Prevent tags from breaking mid-word */
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column; /* Stack thumbnail and content vertically */
+      align-items: center;    /* Center align the content */
+      text-align: center;
+    }
+  
+    .thumbnail-container {
+      margin-right: 0;
+      margin-bottom: 15px; /* Add spacing between the thumbnail and text */
+    }
+  
+    .thumbnail {
+      width: 100%;  /* Make the thumbnail span the full width */
+      height: auto; /* Adjust height to maintain aspect ratio */
+    }
   }
   </style>
   
