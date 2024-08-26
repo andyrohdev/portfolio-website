@@ -174,7 +174,7 @@
     color: #64ffda;
   }
   
-  @media (max-width: 1050px) {
+  @media (max-width: 1200px) {
     .sidebar {
       position: relative; /* Make the header scroll with the page */
       height: auto;
