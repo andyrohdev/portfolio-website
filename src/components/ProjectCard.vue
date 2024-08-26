@@ -1,7 +1,7 @@
 <template>
     <a :href="link" target="_blank" class="project-card">
       <div class="thumbnail-container">
-        <img :src="thumbnail" :alt="title" class="thumbnail" />
+        <img :src="thumbnail" alt="Project Thumbnail" class="thumbnail" />
       </div>
       <div class="project-content">
         <h3>{{ title }}</h3>
@@ -27,14 +27,15 @@
   
   <style scoped>
   .project-card {
-    display: block;
+    display: flex;
+    align-items: flex-start;
     background-color: #172a45;
     padding: 20px;
     border-radius: 10px;
-    text-decoration: none;
-    color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     margin-bottom: 20px;
+    text-decoration: none;
+    color: inherit;
   }
   
   .project-card:hover {
@@ -51,20 +52,35 @@
   }
   
   .thumbnail-container {
-    margin-bottom: 15px;
+    flex-shrink: 0;
+    margin-right: 20px;
   }
   
   .thumbnail {
-    width: 100%;
+    width: 120px;
+    height: 80px;
     border-radius: 10px;
     object-fit: cover;
   }
   
   .project-content {
-    text-align: left;
+    flex-grow: 1;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #64ffda;
+  }
+  
+  p {
+    margin-bottom: 15px;
+    line-height: 1.6;
   }
   
   .tags {
+    display: flex;
+    flex-wrap: wrap; /* Allow tags to wrap to the next line */
     margin-top: 10px;
   }
   
@@ -73,8 +89,10 @@
     padding: 5px 10px;
     border-radius: 5px;
     margin-right: 5px;
+    margin-bottom: 5px; /* Add margin to the bottom to create space between rows */
     font-size: 0.875rem;
     color: #64ffda;
+    white-space: nowrap; /* Prevent tags from breaking mid-word */
   }
   </style>
   
