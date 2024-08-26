@@ -24,16 +24,20 @@
                 Here are a few technologies I’ve been working with recently:
               </p>
               <ul class="skills-list">
-                <li>JavaScript (ES6+)</li>
+                <li>JavaScript</li>
                 <li>Vue.js</li>
                 <li>Node.js</li>
                 <li>SQL</li>
                 <li>Java</li>
-                <li>Express.js</li>
+                <li>Spring Framework</li>
+                <li>PostgresSQL</li>
+                <li>RESTful APIs</li>
+                <li>Micro Services</li>
               </ul>
             </div>
           </div>
         </Section>
+
         <Section id="experience" title="Experience">
           <div class="experience-list">
             <ExperienceCard
@@ -49,18 +53,21 @@
             />
           </div>
         </Section>
+
         <Section id="projects" title="Projects">
-          <div>
-            <h3>LanternDB</h3>
-            <p>
-              LanternDB is a video game database web application developed using Vue.js and Express. It allows users to explore and track video games, with features like user reviews, ratings, and collections.
-              <a href="https://github.com/andyrohdev/LanternDB" target="_blank">View Repo</a>
-            </p>
-            <h3>Typing Test</h3>
-            <p>
-              This is a web application built to test typing speed and accuracy. Users can choose from different modes and track their performance.
-              <a href="https://github.com/andyrohdev/TypingTest" target="_blank">View Repo</a>
-            </p>
+          <div class="project-list">
+            <ProjectCard
+              v-for="project in projects"
+              :key="project.title"
+              :title="project.title"
+              :description="project.description"
+              :tags="project.tags"
+              :thumbnail="project.thumbnail"
+              :link="project.link"
+              :class="{ active: hoveredCard === project.title, inactive: hoveredCard !== null && hoveredCard !== project.title }"
+              @mouseenter="hoveredCard = project.title"
+              @mouseleave="hoveredCard = null"
+            />
           </div>
         </Section>
       </main>
@@ -72,12 +79,14 @@
 import Header from "../components/TheHeader.vue";
 import Section from "../components/Section.vue";
 import ExperienceCard from "../components/ExperienceCard.vue";
+import ProjectCard from "../components/ProjectCard.vue";
 
 export default {
   components: {
     Header,
     Section,
     ExperienceCard,
+    ProjectCard,
   },
   data() {
     return {
@@ -86,7 +95,7 @@ export default {
           title: "Tech Elevator Student",
           duration: "2024",
           description: "Completed a full-stack coding bootcamp focusing on software development and web applications.",
-          tags: ["Java", "JavaScript", "Vue.js", "SQL"],
+          tags: ["Java", "HTML", "CSS", "JavaScript", "Vue.js", "Spring Boot", "Agile", "SQL", "And more..."],
         },
         {
           title: "Davita - Patient Care Technician",
@@ -98,7 +107,23 @@ export default {
           title: "Freelance Gaming Video Editor",
           duration: "2018 - 2021",
           description: "Edited and produced gaming videos, applying creativity and technical skills to deliver high-quality content.",
-          tags: ["Video Editing", "Gaming"],
+          tags: ["Video Editing", "Gaming", "Sound Design", "Visual Effects", "Color Grading", "Adobe"],
+        },
+      ],
+      projects: [
+        {
+          title: "LanternDB",
+          description: "LanternDB is a video game database web application developed using Vue.js.",
+          tags: ["Vue.js", "JavaScript", "Node.js", "Java", "Spring Boot", "Spring Security", "PostgresSQL"],
+          thumbnail: "path/to/lanterndb-thumbnail.jpg",
+          link: "https://github.com/andyrohdev/lanterndb-capstone",
+        },
+        {
+          title: "Typing Test",
+          description: "A front-end web application built to test typing speed and accuracy with different modes.",
+          tags: ["JavaScript", "CSS", "HTML"],
+          thumbnail: "path/to/typingtest-thumbnail.jpg",
+          link: "https://github.com/andyrohdev/typingtest-project",
         },
       ],
       hoveredCard: null,
@@ -224,7 +249,8 @@ export default {
   font-size: 0.875rem;
 }
 
-.experience-list {
+.experience-list,
+.project-list {
   display: flex;
   flex-direction: column;
 }
