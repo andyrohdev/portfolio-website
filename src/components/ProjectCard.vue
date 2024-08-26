@@ -1,6 +1,6 @@
 <template>
     <a :href="link" target="_blank" class="project-card">
-      <div class="thumbnail-container" v-if="showThumbnail">
+      <div class="thumbnail-container">
         <img :src="thumbnail" alt="Project Thumbnail" class="thumbnail" />
       </div>
       <div class="project-content">
@@ -21,22 +21,6 @@
       tags: Array,
       thumbnail: String,
       link: String,
-    },
-    data() {
-      return {
-        showThumbnail: window.innerWidth > 768, // Set initial state
-      };
-    },
-    mounted() {
-      window.addEventListener("resize", this.updateShowThumbnail);
-    },
-    beforeDestroy() {
-      window.removeEventListener("resize", this.updateShowThumbnail);
-    },
-    methods: {
-      updateShowThumbnail() {
-        this.showThumbnail = window.innerWidth > 768;
-      },
     },
   };
   </script>
@@ -105,7 +89,7 @@
   
   @media (max-width: 768px) {
     .project-card {
-      flex-direction: column; /* Stack thumbnail and content vertically */
+      flex-direction: column; /* Stack thumbnail on top of content */
       align-items: center;    /* Center align the content */
       text-align: center;
     }
