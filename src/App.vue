@@ -52,9 +52,9 @@ html, body {
 }
 
 /* Prevent white space on mobile overscroll */
-body {
+/* body {
   overscroll-behavior: contain;
-}
+} */
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
