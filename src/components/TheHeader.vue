@@ -12,18 +12,21 @@
           <li>
             <a
               href="#about"
+              @click.prevent="scrollToSection('about')"
               :class="{ active: activeSection === 'about' }"
             >About</a>
           </li>
           <li>
             <a
               href="#experience"
+              @click.prevent="scrollToSection('experience')"
               :class="{ active: activeSection === 'experience' }"
             >Experience</a>
           </li>
           <li>
             <a
               href="#projects"
+              @click.prevent="scrollToSection('projects')"
               :class="{ active: activeSection === 'projects' }"
             >Projects</a>
           </li>
@@ -73,6 +76,14 @@ export default {
   props: {
     activeSection: String, // Receive the active section from the parent
   },
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 };
 </script>
 
