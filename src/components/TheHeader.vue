@@ -99,7 +99,7 @@ export default {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem; /* Increased size to make it stand out */
   margin-bottom: 0.5rem;
 }
 
