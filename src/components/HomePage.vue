@@ -189,6 +189,7 @@ export default {
   },
 };
 </script>
+
 <style>
 #home-page {
   display: flex;
@@ -202,7 +203,7 @@ export default {
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
-  padding: 0 2%;
+  padding: 0 2%; /* Reduced padding */
   box-sizing: border-box;
 }
 

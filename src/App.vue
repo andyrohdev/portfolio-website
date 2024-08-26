@@ -48,6 +48,7 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: auto;  /* Allow vertical scrolling */
   touch-action: pan-x pan-y; /* Prevent unwanted touch actions */
+  background-color: #0a192f; /* Match the background gradient */
 }
 
 /* Prevent white space on mobile overscroll */
