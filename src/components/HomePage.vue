@@ -93,6 +93,7 @@ export default {
   },
   data() {
     return {
+      hoveredCard: null,
       experiences: [
         {
           title: "Tech Elevator Student",
@@ -135,7 +136,6 @@ export default {
           link: "https://github.com/andyrohdev/typingtest-project",
         },
       ],
-      hoveredCard: null,
       activeSection: null, // Track the currently active section
     };
   },
@@ -147,7 +147,7 @@ export default {
     observeSections() {
       const options = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.6, // Adjust this value based on when you want to trigger the highlight
       };
 
@@ -160,56 +160,40 @@ export default {
       }, options);
 
       // Observe each section
-      document.querySelectorAll('section').forEach((section) => {
+      document.querySelectorAll("section").forEach((section) => {
         observer.observe(section);
       });
     },
     observeAnimations() {
       const animationOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.2, // Adjust this value based on when you want the animations to trigger
       };
 
       const animationObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
+            entry.target.classList.add("animate");
           } else {
-            entry.target.classList.remove('animate'); // Reset animation when out of view
+            entry.target.classList.remove("animate"); // Reset animation when out of view
           }
         });
       }, animationOptions);
 
       // Observe each animatable section
-      document.querySelectorAll('.fade-in').forEach((section) => {
+      document.querySelectorAll(".fade-in").forEach((section) => {
         animationObserver.observe(section);
       });
     },
   },
 };
 </script>
-
 <style>
 #home-page {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a192f, #1b2e48, #0a192f, #1b2735, #22303f);
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .container {
@@ -218,7 +202,7 @@ export default {
   align-items: flex-start;
   width: 100%;
   max-width: 1200px;
-  padding: 0 5%;
+  padding: 0 2%;
   box-sizing: border-box;
 }
 
@@ -228,6 +212,26 @@ export default {
   background-color: transparent;
   color: white;
   padding: 40px;
+  margin-left: 300px; /* Offset for the sidebar on larger screens */
+}
+
+/* Ensure cards are fully visible by default */
+.experience-card,
+.project-card {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dim inactive cards when one card is hovered */
+.experience-card.inactive,
+.project-card.inactive {
+  opacity: 0.5;
+}
+
+/* Keep the active card fully visible */
+.experience-card.active,
+.project-card.active {
+  opacity: 1;
 }
 
 .about-content {
@@ -318,12 +322,9 @@ export default {
   }
 
   .profile-container {
-    display: none; /* Hide the profile image on mobile */
-  }
-
-  .about-text {
-    margin: 0 auto;
-    padding: 0 15px;
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0px;
   }
 
   .about-text h3 {
@@ -332,6 +333,10 @@ export default {
 
   .skills-list {
     justify-content: center;
+  }
+
+  .content {
+    margin-left: 0; /* Remove the margin on mobile */
   }
 }
 
@@ -342,8 +347,10 @@ export default {
   }
 
   .content {
-    width: 100%;
-    padding-left: 20px;
+    width: 100%; /* Allow content to take the full width */
+    max-width: 100%; /* Remove the maximum width limitation */
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin-left: 0; /* Remove the margin on smaller screens */
   }
 }
 </style>
