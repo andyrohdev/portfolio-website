@@ -35,7 +35,7 @@
                 <li>Micro Services</li>
               </ul>
               <p>
-                <a href="/mnt/data/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
+                <a href="../assets/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
               </p>
             </div>
           </div>
