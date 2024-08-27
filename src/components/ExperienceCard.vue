@@ -4,7 +4,8 @@
       <h3>{{ title }}</h3>
       <p>{{ duration }}</p>
     </div>
-    <p>{{ description }}</p>
+    <!-- Render description content as HTML -->
+    <p v-html="description"></p>
     <div class="tags">
       <span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span>
     </div>
@@ -16,8 +17,8 @@ export default {
   props: {
     title: String,
     duration: String,
-    description: String,
-    tags: Array
+    description: String, // Ensure the description is a string with HTML content
+    tags: Array,
   }
 };
 </script>
@@ -59,6 +60,30 @@ export default {
   white-space: nowrap;
 }
 
+/* Style for all links within experience cards */
+.experience-card a {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.experience-card a:hover {
+  text-decoration: underline;
+}
+
+/* Additional styling for YouTube links specifically */
+.experience-card a[href*="youtube.com"] {
+  color: #ff0000; /* YouTube Red */
+}
+
+/* Additional styling for other domain-specific links (example for GitHub) */
+.experience-card a[href*="github.com"] {
+  color: #333; /* GitHub Dark Grey */
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
   .experience-header {
     flex-direction: column;
