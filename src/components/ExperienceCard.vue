@@ -73,11 +73,6 @@ export default {
   text-decoration: underline;
 }
 
-/* Additional styling for YouTube links specifically */
-.experience-card a[href*="youtube.com"] {
-  color: #ff0000; /* YouTube Red */
-}
-
 /* Additional styling for other domain-specific links (example for GitHub) */
 .experience-card a[href*="github.com"] {
   color: #333; /* GitHub Dark Grey */

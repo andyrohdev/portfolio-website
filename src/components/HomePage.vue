@@ -116,7 +116,8 @@ export default {
         {
           title: "Freelance Gaming Video Editor",
           duration: "2020 - 2022",
-          description: `
+          description:
+          `
             Edited and produced gaming videos, applying creativity and technical skills to deliver high-quality content.
             Check out my YouTube channel for examples of my work: 
             <a href="https://www.youtube.com/@nojiwon" target="_blank" class="youtube-link">nojiwon</a>.
@@ -301,7 +302,7 @@ export default {
 }
 
 .youtube-link {
-  color: #ff0000;
+  color: #64ffda;
   font-weight: bold;
   text-decoration: none;
 }
