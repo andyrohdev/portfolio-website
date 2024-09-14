@@ -89,7 +89,7 @@ export default {
 
 <style scoped>
 .sidebar {
-  position: fixed; /* Fix it to the viewport */
+  position: fixed;
   top: 0;
   z-index: 1000;
   width: 300px;
