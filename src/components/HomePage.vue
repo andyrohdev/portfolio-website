@@ -176,7 +176,7 @@ export default {
     date: "2024",
     thumbnail:
       "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg", // White Spotify logo placeholder
-    link: "https://github.com/andyrohdev/spotify-profile-overview",
+    link: "https://andyrohdev.github.io/spotify-profile-overview/#/",
   },
 ],
 
