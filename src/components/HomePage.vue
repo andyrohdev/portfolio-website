@@ -34,11 +34,14 @@
                 <li>Vue.js</li>
                 <li>Node.js</li>
                 <li>SQL</li>
-                <li>Java</li>
+                <li>C#</li>
                 <li>Spring Framework</li>
                 <li>PostgresSQL</li>
                 <li>RESTful APIs</li>
                 <li>Micro Services</li>
+                <li>OAuth 2.0</li>
+                <li>React.js</li>
+                <li>Axios</li>
               </ul>
               <p>
                 <a
