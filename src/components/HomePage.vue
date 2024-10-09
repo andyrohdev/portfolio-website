@@ -44,12 +44,7 @@
                 <li>Axios</li>
               </ul>
               <p>
-                <a
-                  href="https://andyrohdev.github.io/portfolio-website/andy_roh_resume.pdf"
-                  target="_blank"
-                  class="resume-link"
-                  >View My Résumé</a
-                >
+                <a href="/portfolio-website/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
               </p>
             </div>
           </div>
