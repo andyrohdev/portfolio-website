@@ -7,7 +7,7 @@
           <div class="about-content fade-in">
             <div class="profile-container">
               <img
-                src="https://res.cloudinary.com/dtwxjssaq/image/upload/v1722004673/1715554927606_c7dr5q.jpg"
+                src="https://res.cloudinary.com/dtwxjssaq/image/upload/v1738096657/1-1_Roh_Andy_8x10_GrayBackground_jz39le.jpg"
                 alt="Profile"
                 class="profile-image"
               />
