@@ -1,17 +1,20 @@
-#!/usr/bin/env sh
-
 set -e
 
+echo "Building the project..."
 npm run build
 
+echo "Navigating to the dist directory..."
 cd dist
 
-# Reinitialize git to ensure it's a fresh repo
+echo "Initializing git repository..."
 git init
+
+echo "Adding and committing changes..."
 git add -A
 git commit -m 'New Deployment'
 
-# Force push to the gh-pages branch
+echo "Pushing to gh-pages branch..."
 git push -f https://github.com/andyrohdev/portfolio-website.git master:gh-pages
 
+echo "Returning to the previous directory..."
 cd -
