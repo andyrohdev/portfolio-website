@@ -6,8 +6,11 @@
         <Section id="about" title="">
           <div class="about-content fade-in">
             <div class="profile-container">
-              <img src="https://res.cloudinary.com/dtwxjssaq/image/upload/v1722004673/1715554927606_c7dr5q.jpg"
-                alt="Profile" class="profile-image" />
+              <img
+                src="https://res.cloudinary.com/dtwxjssaq/image/upload/v1722004673/1715554927606_c7dr5q.jpg"
+                alt="Profile"
+                class="profile-image"
+              />
             </div>
             <div class="about-text">
               <h3>Hi, I'm Andy.</h3>
@@ -30,16 +33,17 @@
                 <li>Vue.js</li>
                 <li>Node.js</li>
                 <li>SQL</li>
-                <li>Java</li>
+                <li>C#</li>
                 <li>Spring Framework</li>
                 <li>PostgresSQL</li>
                 <li>RESTful APIs</li>
                 <li>Micro Services</li>
-                <li>React</li>
+                <li>OAuth 2.0</li>
+                <li>React.js</li>
+                <li>Axios</li>
               </ul>
               <p>
-                <a href="https://andyrohdev.github.io/portfolio-website/andy_roh_resume.pdf" target="_blank"
-                  class="resume-link">View My Résumé</a>
+                <a href="/portfolio-website/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
               </p>
             </div>
           </div>
@@ -47,23 +51,41 @@
 
         <Section id="experience" title="Experience">
           <div class="experience-list fade-in">
-            <ExperienceCard v-for="experience in experiences" :key="experience.title" :title="experience.title"
-              :duration="experience.duration" :description="experience.description" :tags="experience.tags" :class="{
+            <ExperienceCard
+              v-for="experience in experiences"
+              :key="experience.title"
+              :title="experience.title"
+              :duration="experience.duration"
+              :description="experience.description"
+              :tags="experience.tags"
+              :class="{
                 active: hoveredCard === experience.title,
                 inactive:
                   hoveredCard !== null && hoveredCard !== experience.title,
-              }" @mouseenter="hoveredCard = experience.title" @mouseleave="hoveredCard = null" />
+              }"
+              @mouseenter="hoveredCard = experience.title"
+              @mouseleave="hoveredCard = null"
+            />
           </div>
         </Section>
 
         <Section id="projects" title="Projects">
           <div class="project-list fade-in">
-            <ProjectCard v-for="project in projects" :key="project.title" :title="project.title"
-              :description="project.description" :tags="project.tags" :thumbnail="project.thumbnail"
-              :link="project.link" :class="{
+            <ProjectCard
+              v-for="project in projects"
+              :key="project.title"
+              :title="project.title"
+              :description="project.description"
+              :tags="project.tags"
+              :thumbnail="project.thumbnail"
+              :link="project.link"
+              :class="{
                 active: hoveredCard === project.title,
                 inactive: hoveredCard !== null && hoveredCard !== project.title,
-              }" @mouseenter="hoveredCard = project.title" @mouseleave="hoveredCard = null" />
+              }"
+              @mouseenter="hoveredCard = project.title"
+              @mouseleave="hoveredCard = null"
+            />
           </div>
         </Section>
       </main>
@@ -154,54 +176,45 @@ export default {
         },
       ],
       projects: [
-  {
-    title: "LanternDB",
-    description:
-      "LanternDB is a video game database web application developed using Vue.js.",
-    tags: [
-      "Vue.js",
-      "JavaScript",
-      "Node.js",
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "PostgresSQL",
-    ],
-    date: "2024",
-    thumbnail:
-      "https://res.cloudinary.com/dtwxjssaq/image/upload/v1724637273/Home_Page_kxtrqd.png",
-    link: "https://github.com/andyrohdev/lanterndb-capstone",
-  },
-  {
-    title: "Typing Test",
-    description:
-      "A front-end web application built to test typing speed and accuracy with different modes.",
-    tags: ["JavaScript", "CSS", "HTML"],
-    date: "2024",
-    thumbnail:
-      "https://res.cloudinary.com/dtwxjssaq/image/upload/v1724637397/Screenshot_2024-08-25_215549_wqaz4c.png",
-    link: "https://andyrohdev.github.io/typing-test/",
-  },
-  {
-    title: "Spotify Profile Overview (SPO)",
-    description:
-      "A web application that integrates with the Spotify Web API to provide a detailed overview of your Spotify profile, including top tracks, artists, and playlists.",
-    tags: ["React", "Spotify Web API", "JavaScript", "CSS"],
-    date: "2024",
-    thumbnail:
-      "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg", // White Spotify logo placeholder
-    link: "https://github.com/andyrohdev/spotify-profile-overview",
-  },
-  {
-    title: "Net Income Processor (NIP)",
-    description: "A Java console application that helps users calculate their paycheck's fixed and percentage deductables, net income, gross income, and summary file saving.",
-    tags: ["Java", "IntelliJ"],
-    date: "2025",
-    thumbnail: "https://res.cloudinary.com/dtwxjssaq/image/upload/v1738076788/NIP_Preview_Image_nq7qie.png",
-    link: "https://github.com/andyrohdev/net-income-processor"
-  }
-],
-
+        {
+          title: "LanternDB",
+          description:
+            "LanternDB is a video game database web application developed using Vue.js.",
+          tags: [
+            "Vue.js",
+            "JavaScript",
+            "Node.js",
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "PostgresSQL",
+          ],
+          date: "2024",
+          thumbnail:
+            "https://res.cloudinary.com/dtwxjssaq/image/upload/v1724637273/Home_Page_kxtrqd.png",
+          link: "https://github.com/andyrohdev/lanterndb-capstone",
+        },
+        {
+          title: "Typing Test",
+          description:
+            "A front-end web application built to test typing speed and accuracy with different modes.",
+          tags: ["JavaScript", "CSS", "HTML"],
+          date: "2024",
+          thumbnail:
+            "https://res.cloudinary.com/dtwxjssaq/image/upload/v1724637397/Screenshot_2024-08-25_215549_wqaz4c.png",
+          link: "https://andyrohdev.github.io/typing-test/",
+        },
+        {
+          title: "Spotify Profile Overview",
+          description:
+            "A web application that integrates with the Spotify Web API to provide a detailed overview of your Spotify profile, including top tracks, artists, and playlists.",
+          tags: ["React", "Spotify Web API", "JavaScript", "CSS"],
+          date: "2024",
+          thumbnail:
+            "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg", // White Spotify logo placeholder
+          link: "https://andyrohdev.github.io/spotify-profile-overview/#/",
+        },
+      ],
 
       activeSection: null, // Track the currently active section
     };
