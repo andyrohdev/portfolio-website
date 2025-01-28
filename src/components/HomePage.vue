@@ -12,16 +12,15 @@
             <div class="about-text">
               <h3>Hi, I'm Andy.</h3>
               <p>
-                A passionate Full Stack Developer, constantly learning and
+                Full Stack Developer, constantly learning and
                 honing my skills to build highly functional and visually
                 appealing websites. I enjoy working on projects that challenge
                 me to think critically and creatively.
               </p>
               <p>
                 In my free time, I like to explore new technology, play games,
-                and edit videos. Previously a high school eSports captain, I
-                excel in fast-paced environments. I also enjoy sharing my
-                experiences and knowledge.
+                and edit videos. Previously a Patient Care Technician at DaVita, I
+                excel in fast-paced environments.
               </p>
               <p>
                 Here are a few technologies I’ve been working with recently:
@@ -36,6 +35,7 @@
                 <li>PostgresSQL</li>
                 <li>RESTful APIs</li>
                 <li>Micro Services</li>
+                <li>React</li>
               </ul>
               <p>
                 <a href="https://andyrohdev.github.io/portfolio-website/andy_roh_resume.pdf" target="_blank"
@@ -89,6 +89,20 @@ export default {
       hoveredCard: null,
       experiences: [
         {
+          title: "Software Developer @ OFCC",
+          duration: "2025",
+          description: "Java Backend Software Developer at the Ohio Facilities Construction Commission.",
+          tags: [
+            "Java",
+            "Spring Boot",
+            "MongoDB",
+            "NoSQL",
+            "Azure DevOps",
+            "Unit Testing",
+            "Linux"
+          ]
+        },
+        {
           title: "Tech Elevator Student",
           duration: "2024",
           description:
@@ -108,21 +122,21 @@ export default {
           ],
         },
         {
-          title: "Davita - Patient Care Technician",
+          title: "Patient Care Technician @ DaVita",
           duration: "2023 - 2024",
           description:
             "Provided patient care and support in a healthcare environment, ensuring quality treatment.",
           tags: ["Healthcare", "Patient Care"],
         },
         {
-          title: "High School VALORANT eSports Captain",
+          title: "VALORANT eSports Captain",
           duration: "2020 - 2022",
           description:
             "Led the high school VALORANT eSports team, developing leadership, strategy, and team coordination skills in a competitive environment.",
-          tags: ["Leadership", "Team Management", "Strategy"],
+          tags: ["Leadership", "Team Management", "Strategy", "eSports"],
         },
         {
-          title: "Freelance Gaming Video Editor",
+          title: "Freelance Video Editor",
           duration: "2020 - 2022",
           description: `
             Edited and produced gaming videos, applying creativity and technical skills to deliver high-quality content.
@@ -131,11 +145,11 @@ export default {
           `,
           tags: [
             "Video Editing",
-            "Gaming",
+            "Adobe After Effects",
             "Sound Design",
             "Visual Effects",
             "Color Grading",
-            "Adobe",
+            "Motion Design",
           ],
         },
       ],
@@ -169,7 +183,7 @@ export default {
     link: "https://andyrohdev.github.io/typing-test/",
   },
   {
-    title: "Spotify Profile Overview",
+    title: "Spotify Profile Overview (SPO)",
     description:
       "A web application that integrates with the Spotify Web API to provide a detailed overview of your Spotify profile, including top tracks, artists, and playlists.",
     tags: ["React", "Spotify Web API", "JavaScript", "CSS"],
@@ -178,6 +192,14 @@ export default {
       "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg", // White Spotify logo placeholder
     link: "https://github.com/andyrohdev/spotify-profile-overview",
   },
+  {
+    title: "Net Income Processor (NIP)",
+    description: "A Java console application that helps users calculate their paycheck's fixed and percentage deductables, net income, gross income, and summary file saving.",
+    tags: ["Java", "IntelliJ"],
+    date: "2025",
+    thumbnail: "https://res.cloudinary.com/dtwxjssaq/image/upload/v1738076788/NIP_Preview_Image_nq7qie.png",
+    link: "https://github.com/andyrohdev/net-income-processor"
+  }
 ],
 
 
