@@ -217,7 +217,7 @@ export default {
         {
           title: "Net Income Processor (NIP)",
           description: "A Java console application that helps users calculate their paycheck's fixed and percentage deductables, net income, gross income, and summary file saving.",
-          tags: ["Java", "IntelliJ"],
+          tags: ["Java", "IntelliJ CE"],
           date: "2025",
           thumbnail: "https://res.cloudinary.com/dtwxjssaq/image/upload/v1738076788/NIP_Preview_Image_nq7qie.png",
           link: "https://github.com/andyrohdev/net-income-processor"
