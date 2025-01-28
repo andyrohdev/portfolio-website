@@ -205,7 +205,7 @@ export default {
           link: "https://andyrohdev.github.io/typing-test/",
         },
         {
-          title: "Spotify Profile Overview",
+          title: "Spotify Profile Overview (SPO)",
           description:
             "A web application that integrates with the Spotify Web API to provide a detailed overview of your Spotify profile, including top tracks, artists, and playlists.",
           tags: ["React", "Spotify Web API", "JavaScript", "CSS"],
@@ -214,6 +214,14 @@ export default {
             "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg", // White Spotify logo placeholder
           link: "https://andyrohdev.github.io/spotify-profile-overview/#/",
         },
+        {
+          title: "Net Income Processor (NIP)",
+          description: "A Java console application that helps users calculate their paycheck's fixed and percentage deductables, net income, gross income, and summary file saving.",
+          tags: ["Java", "IntelliJ"],
+          date: "2025",
+          thumbnail: "https://res.cloudinary.com/dtwxjssaq/image/upload/v1738076788/NIP_Preview_Image_nq7qie.png",
+          link: "https://github.com/andyrohdev/net-income-processor"
+        }
       ],
 
       activeSection: null, // Track the currently active section
