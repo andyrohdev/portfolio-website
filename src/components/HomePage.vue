@@ -236,7 +236,7 @@ export default {
             date: "2025",
           tags: ["Vercel", "Next.js", "TypeScript", "CSS", "HTML", "Mantine", "React.js"],
           thumbnail:
-          "https://res.cloudinary.com/dtwxjssaq/image/upload/v1748968581/quicktask-cloudinary-thumbnail_v4myvw.png",
+          "https://res.cloudinary.com/dtwxjssaq/image/upload/v1748975520/quick-task-cloudinary-thumbnail_ih7mpp.png",
           link: "https://quick-task-nu.vercel.app/"
         }
       ],
