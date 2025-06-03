@@ -13,34 +13,32 @@
               />
             </div>
             <div class="about-text">
-              <h3>Hi, I'm Andy.</h3>
+              <h3>Hello, I'm Andy.</h3>
               <p>
-                Full Stack Developer, constantly learning and
+                Full Stack Developer, learning and
                 honing my skills to build highly functional and visually
                 appealing websites. I enjoy working on projects that challenge
-                me to think critically and creatively.
+                me to think critically / creatively.
               </p>
               <p>
-                In my free time, I like to explore new technology, play games,
-                and edit videos. Previously a Patient Care Technician at DaVita, I
-                excel in fast-paced environments.
+                In my free time, I like to explore new technology, video game,
+                and edit videos.
               </p>
               <p>
-                Here are a few technologies I’ve been working with recently:
+                Some technologies I’ve been working with recently:
               </p>
               <ul class="skills-list">
-                <li>JavaScript</li>
-                <li>Vue.js</li>
+                <li>Vercel</li>
+                <li>TypeScript</li>
+                <li>Next.js</li>
+                <li>Zod</li>
+                <li>Mantine</li>
                 <li>Node.js</li>
-                <li>SQL</li>
-                <li>C#</li>
+                <li>MariaDB</li>
                 <li>Spring Framework</li>
-                <li>PostgresSQL</li>
-                <li>RESTful APIs</li>
                 <li>Micro Services</li>
                 <li>OAuth 2.0</li>
                 <li>React.js</li>
-                <li>Axios</li>
               </ul>
               <p>
                 <a href="/portfolio-website/andy_roh_resume.pdf" target="_blank" class="resume-link">View My Résumé</a>
@@ -121,7 +119,14 @@ export default {
             "NoSQL",
             "Azure DevOps",
             "Unit Testing",
-            "Linux"
+            "Linux",
+            "Agile",
+            "Next.js",
+            "TypeScript",
+            "Zod",
+            "Mantine",
+            "MariaDB",
+            "MongoDB",
           ]
         },
         {
@@ -205,6 +210,16 @@ export default {
           link: "https://andyrohdev.github.io/typing-test/",
         },
         {
+          title: "Portfolio Website",
+          description:
+            "A personal portfolio website showcasing my skills, projects, and experience as a full-stack developer.",
+          tags: ["Vue.js", "JavaScript", "CSS", "HTML"],
+          date: "2024",
+          thumbnail:
+            "https://res.cloudinary.com/dtwxjssaq/image/upload/v1748968823/portfolio-cloudinary-thumbnail_qfjnfo.png",
+          link: "https://andyrohdev.github.io/portfolio-website/"
+        },
+        {
           title: "Spotify Profile Overview (SPO)",
           description:
             "A web application that integrates with the Spotify Web API to provide a detailed overview of your Spotify profile, including top tracks, artists, and playlists.",
@@ -215,12 +230,14 @@ export default {
           link: "https://andyrohdev.github.io/spotify-profile-overview/#/",
         },
         {
-          title: "Net Income Processor (NIP)",
-          description: "A Java console application that helps users calculate their paycheck's fixed and percentage deductables, net income, gross income, and summary file saving.",
-          tags: ["Java", "IntelliJ CE"],
-          date: "2025",
-          thumbnail: "https://res.cloudinary.com/dtwxjssaq/image/upload/v1738076788/NIP_Preview_Image_nq7qie.png",
-          link: "https://github.com/andyrohdev/net-income-processor"
+          title: "QuickTask",
+          description:
+            "A simple frontend demo task management application that allows users to create, manage, and track their tasks efficiently. Note: This is a demo application and does not include backend functionality.",
+            date: "2025",
+          tags: ["Vercel", "Next.js", "TypeScript", "CSS", "HTML", "Mantine", "React.js"],
+          thumbnail:
+          "https://res.cloudinary.com/dtwxjssaq/image/upload/v1748968581/quicktask-cloudinary-thumbnail_v4myvw.png",
+          link: "https://quick-task-nu.vercel.app/"
         }
       ],
 
